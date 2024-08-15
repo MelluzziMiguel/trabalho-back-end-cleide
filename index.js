@@ -1,13 +1,13 @@
 const express = require('express');
-const app = express();
+const server = express();
 const port = 3000;
 
 // Rota GET para retornar uma mensagem de boas-vindas
-app.get('/', (req, res) => {
-  res.send('Oii Cleide! Você é demais!');
+server.get('/cliente', (req, res) => {
+  return res.json({cliente: 'Miguel Lindão!'});
 });
 
 // Inicia o servidor
-app.listen(port, () => {
+server.listen(3000, () => {
   console.log(`API rodando em http://localhost:${port}`);
 });
